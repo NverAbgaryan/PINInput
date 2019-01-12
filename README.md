@@ -25,14 +25,6 @@ React component for entering and validating PIN code.
         />
 ```
 
-### Numeric input:
-
-```js
-<PINInput
-          type='number'
-          fields={4}
-        />
-```
 ### Password input:
 ```js
 <PINInput
