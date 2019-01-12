@@ -1,6 +1,6 @@
 {
   "name": "pin-input",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "react pin input component ",
   "main": "PINInput.js",
   "scripts": {
