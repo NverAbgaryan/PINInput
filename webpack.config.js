@@ -1,36 +1,38 @@
 const path = require('path');
 
-module.exports = [
-  {
-    entry:     './PINInput.js',
-    devtool:   'source-map',
-    mode:      'production',
-    output:    {
-      path:          path.resolve(__dirname, 'dist'),
-      globalObject: 'typeof self !== \'undefined\' ? self : this',
-      filename:      'PINInput.js',
-      libraryTarget: 'umd',
-      library:       'PINInput',
-    },
-    module:    {
-      rules: [
-        {
-          test:    /\.js$/,
-          use:     ['babel-loader'],
-          exclude: /node_modules/,
-        },
-        {
-          test: /\.json$/,
-          use:  'json-loader',
-        },
-        {
-          test: /\.css$/,
-          use:  ['css', 'sass'],
-        },
-      ],
-    },
-    externals: {
-      react: 'react',
-    },
-  }
-];
+let entry = './PINInput.js';
+let output = {
+  path: path.join(__dirname, 'dist'),
+  publicPath: '/dist/',
+};
+
+
+module.exports = {
+  entry,
+  output: Object.assign(output, {
+    filename: 'PINInput.js',
+    library: 'react-sequence',
+    libraryTarget: 'umd', // universal module definition
+  }),
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+  module: {
+    rules: [
+      {
+        test:    /\.js$/,
+        use:     ['babel-loader'],
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.json$/,
+        use:  'json-loader',
+      },
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+      }
+    ]
+  },
+};
