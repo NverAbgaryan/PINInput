@@ -13,7 +13,10 @@
   "keywords": [
     "pin-input",
     "react-pin-input",
-    "input-code"
+    "input-code",
+    "react-pin",
+    "pin",
+    "pin-component"
   ],
   "author": "Nver Abgaryan",
   "license": "ISC",
