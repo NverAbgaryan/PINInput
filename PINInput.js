@@ -39,20 +39,18 @@ class PINInput extends Component {
     }
 
     this.textInput = [];
-
-    this.getInputType = this.getInputType.bind(this);
   }
 
-  handleBlur () {
+  handleBlur = () => {
     this.setState({ focusOut: true });
   };
 
-  handelFocus (e) {
+  handelFocus = (e) => {
     this.setState({ focusOut: false });
     e.target.select(e);
   };
 
-  handleChange (e) {
+  handleChange = (e) => {
     const { filterChars } = this.props;
 
     let value = String(e.target.value);
@@ -112,7 +110,7 @@ class PINInput extends Component {
   };
 
 
-  handleKeyDown (e) {
+  handleKeyDown = (e) => {
     if(this.props.readOnly){
       return false;
     }
@@ -184,7 +182,7 @@ class PINInput extends Component {
 
   };
 
-  getInputType (type, i) {
+  getInputType = (type, i) => {
     let inputLength = this.state.input.filter(item => item).length;
     if (this.props.showLastTypedValue && inputLength > 1 && i < inputLength - 1) {
       return 'password';
@@ -223,10 +221,10 @@ class PINInput extends Component {
               max={1}
               maxLength={input.length === i + 1 ? 1 : input.length}
               autoComplete="off"
-              onFocus={(e) => this.handelFocus(e)}
-              onBlur={(e) => this.handleBlur(e)}
-              onChange={(e) => this.handleChange(e)}
-              onKeyDown={(e) => this.handleKeyDown(e)}
+              onFocus={this.handelFocus}
+              onBlur={this.handleBlur}
+              onChange={this.handleChange}
+              onKeyDown={this.handleKeyDown}
               data-valid={isValid}
               pattern={pattern}
               readOnly={readOnly}

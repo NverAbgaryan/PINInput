@@ -2,7 +2,7 @@
   "name": "pin-input",
   "version": "1.0.3",
   "description": "react pin input component ",
-  "main": "PINInput.js",
+  "main": "./dist/PINInput.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +22,10 @@
   },
   "homepage": "https://github.com/NverAbgaryan/PINInput#readme",
   "dependencies": {
-    "react": "^16.7.0"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "react": "^16.7.0",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
   }
 }
