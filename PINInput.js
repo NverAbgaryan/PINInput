@@ -40,6 +40,7 @@ class PINInput extends Component {
 
     this.textInput = [];
 
+    this.getInputType = this.getInputType.bind(this);
   }
 
   handleBlur () {
@@ -183,7 +184,7 @@ class PINInput extends Component {
 
   };
 
-  getInputType = (type, i) => {
+  getInputType (type, i) {
     let inputLength = this.state.input.filter(item => item).length;
     if (this.props.showLastTypedValue && inputLength > 1 && i < inputLength - 1) {
       return 'password';
