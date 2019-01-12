@@ -1,0 +1,27 @@
+{
+  "name": "pin-input",
+  "version": "1.0.0",
+  "description": "react pin input component ",
+  "main": "PINInput.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NverAbgaryan/PINInput.git"
+  },
+  "keywords": [
+    "pin-input",
+    "react-pin-input",
+    "input-code"
+  ],
+  "author": "Nver Abgaryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NverAbgaryan/PINInput/issues"
+  },
+  "homepage": "https://github.com/NverAbgaryan/PINInput#readme",
+  "dependencies": {
+    "react": "^16.7.0"
+  }
+}
