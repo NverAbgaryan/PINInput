@@ -1,5 +1,5 @@
 # React PINInput
-React component for entering and validating PIN code.
+React PINInput component .
 
 
 ## Installation
