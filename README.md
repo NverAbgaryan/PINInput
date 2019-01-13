@@ -92,6 +92,21 @@ React PINInput component .
         />
 ```
 
+### Pass callback functions
+```js
+
+const someFunction = () =>{
+  
+}
+
+<PINInput
+          type='text'
+          fields={4}
+          onChange={someFunction}
+          onKeyDown={someFunction}
+        />
+```
+
 
 ## Props:
 
